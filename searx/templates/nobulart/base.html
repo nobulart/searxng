@@ -64,10 +64,6 @@
   </main>
   <footer>
     <p>
-      This instance hosted by <a href="https://nobulart.com">nobulart.com</a><br/>
-      Tor: <a href="http://tnd4del36xwmip5z3agrgfmga7pora3ddyzh7t5lng2u2wgjbpxbmcyd.onion/">http://tnd4del36xwmip5z3agrgfmga7pora3ddyzh7t5lng2u2wgjbpxbmcyd.onion</a>
-    </p>
-    <p>
     {{ _('Powered by') }} <a href="{{ url_for('info', pagename='about') }}">searxng</a> - {{ searx_version }} — {{ _('a privacy-respecting, open metasearch engine') }}<br/>
         <a href="{{ searx_git_url }}">{{ _('Source code') }}</a>
         | <a href="{{ get_setting('brand.issue_url') }}">{{ _('Issue tracker') }}</a>
@@ -81,6 +77,10 @@
         {% if get_setting('general.contact_url') %}
         | <a href="{{ get_setting('general.contact_url') }}">{{ _('Contact instance maintainer') }}</a>
         {% endif %}
+    </p>
+    <p>
+      This instance hosted by<br />
+      <a href="https://nobulart.com"><img src="{{ url_for('static', filename='img/nobulart.png') }}" /></a><br />
     </p>
   </footer>
   <!--[if gte IE 9]>-->
